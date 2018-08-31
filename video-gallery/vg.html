@@ -1,0 +1,89 @@
+<!-- Author: Zander.Mao -->
+<!-- Date Aug 30, 2018 -->
+<!-- This is a video gallery for iframe (Youku compatible)using CSS&JS. Videos are displayed in lightboxes. 
+    The video will stop once the lightbox is closed. Can also be used as image gallery. 
+    Hover above the thumbnails to display the video intro.
+    test.jpg is provided by T.Tian-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vg.css" type="text/css">
+    <title>Video Gallery</title>
+    <script type="text/javascript">
+    //  refresh the link of the iframe video, so the video will be stopped.
+        var v_id = ""
+        function stopPlay(obj) {
+            var ifr = obj.getElementsByTagName("iframe")[0]
+            var v_src = ifr.getAttribute("src")
+            ifr.setAttribute("src", v_src)
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="video">
+        <li>
+            <label for="video1">
+                <img class="tn" src="test.jpg">
+                <p class="intro">video intro</p>
+            </label>
+            <a href=""><div class="v-title">video title</div></a>
+            <div class="video-player">
+                <input type="radio" id="video1" name="checkbox" />
+                <div class="v-overlay">
+                    <label for="close" title="Close lightbox" onclick="stopPlay(this)"><iframe height=498 width=510 src='http://player.youku.com/embed/XMzQ4NTUwMjgxMg==' frameborder=0 allowfullscreen="true"></iframe></label>
+                </div>
+            </div>
+        </li>
+        <li>
+            <label for="video2">
+                <img class="tn" src="test.jpg">
+                <p class="intro">video intro</p>
+            </label>
+            <a href=""><div class="v-title">video title</div></a>
+            <div class="video-player">
+                <input type="radio" id="video2" name="checkbox" />
+                <div class="v-overlay">
+                    <label for="close" title="Close lightbox" onclick="stopPlay(this)"><iframe height=498 width=510 src='http://player.youku.com/embed/XMzQ4NTUwMjgxMg==' frameborder=0 allowfullscreen="true"></iframe></label>
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <label for="video3">
+                <img class="tn" src="test.jpg">
+                <p class="intro">video intro</p>
+            </label>
+
+            <a href=""><div class="v-title">video title</div></a>
+            <div class="video-player">
+
+                <input type="radio" id="video3" name="checkbox" />
+                <div class="v-overlay">
+                    <label for="close" title="Close lightbox" onclick="stopPlay(this)"><iframe height=498 width=510 src='http://player.youku.com/embed/XMzQ4NTUwMjgxMg==' frameborder=0 allowfullscreen="true"></iframe></label>
+                </div>
+            </div>
+        </li>
+        <li>
+            <label for="video4">
+                <img class="tn" src="test.jpg">
+                <p class="intro">video intro</p>
+            </label>
+            <a href=""><div class="v-title">video title</div></a>
+            <div class="video-player">
+
+                <input type="radio" id="video4" name="checkbox" />
+                <div class="v-overlay">
+                    <label for="close" title="Close lightbox" onclick="stopPlay(this)"><iframe height=498 width=510 src='http://player.youku.com/embed/XMzQ4NTUwMjgxMg==' frameborder=0 allowfullscreen="true"></iframe></label>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <input id="close" type="radio" name="checkbox">
+</body>
+
+</html>
